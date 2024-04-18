@@ -1,10 +1,6 @@
 <?php
-
-namespace Core;
-
-use PDO;
-
-
+namespace core;
+use pdo;
 class Database
 {
     public $connection;
@@ -49,9 +45,6 @@ class Database
         return $result;
     }
 }
-
-
-
 
 
 
