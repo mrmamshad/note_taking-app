@@ -5,7 +5,7 @@ namespace Core;
 class Router
 {
     protected $routes = [];
-
+     
     public function add($method, $uri, $controller)
     {
         $this->routes[] = [
@@ -42,12 +42,13 @@ class Router
 
     public function route($uri, $method)
     {
+
         foreach ($this->routes as $route) {
-            if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
+            if ($route['uri'] === $uri ) {
                 return require base_path($route['controller']);
             }
         }
-
+      
         $this->abort();
     }
 

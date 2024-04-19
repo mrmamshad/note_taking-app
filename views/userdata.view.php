@@ -86,10 +86,8 @@ $user_names = $db->query('SELECT * FROM users')->get();
 
     </ul>
 
-
-    <form method="post">
         <p class="mt-7  ml-16">
             <a href="/createnote" class="text-blue-600 hover:underline">Create Note</a>
         </p>
-    </form>
+  
 </div>
