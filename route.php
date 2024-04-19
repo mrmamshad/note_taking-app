@@ -5,9 +5,8 @@ $router->get('/users', 'controllers/users.php');
 
 $router->get('/notes', 'controllers/notes.php');
 
-$router->get('/register', 'controllers/registration.php');
-$router->get('/login', 'controllers/login.php');
 $router->get('/userdata', 'controllers/userdata.php');
 $router->get('/createnote', 'controllers/notes/createnote.php');
 
-
+$router->get('/register', 'controllers/registration/create.php');
+$router->get('/login', 'controllers/login.php');

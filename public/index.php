@@ -1,5 +1,8 @@
 <?php
 
+
+session_start();
+
 const BASE_PATH = __DIR__ . '/../';
 
 require BASE_PATH . 'core/functions.php';
@@ -21,4 +24,4 @@ $method = $_POST['method'] ?? $_SERVER['REQUEST_METHOD'];
 
 $router->route($uri, $method);
 
-dd($_GET['id']);
+// dd($_GET['id']);

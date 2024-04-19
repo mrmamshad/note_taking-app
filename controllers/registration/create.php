@@ -2,6 +2,6 @@
 
 
 
-view("registration.view.php", [
+view("registration/create.view.php", [
     'heading' => 'Registration Form',
 ]);
