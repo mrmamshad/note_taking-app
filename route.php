@@ -5,10 +5,12 @@ $router->get('/users', 'controllers/users.php');
 
 $router->get('/notes', 'controllers/notes.php');
 $router->get('/note', 'controllers/showdata.php');
+$router->delete('/note', 'controllers/distroyshowdata.php');
 
 $router->get('/userdata', 'controllers/userdata.php');
-$router->delete('/note', 'controllers/userdata_distroy.php');
+
 $router->get('/createnote', 'controllers/notes/createnote.php');
+$router->post('/createnote', 'controllers/notes/store.php');
 
 $router->get('/register', 'controllers/registration/create.php');
 $router->post('/register', 'controllers/registration/store.php');

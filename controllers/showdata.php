@@ -22,17 +22,17 @@ view("showdata.view.php", [
 
 // dd($_SERVER);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $note = $db->query('SELECT * FROM notes WHERE id = :id', [
-        'id' => $_GET['id']
-    ])->findOrFail();
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     $note = $db->query('SELECT * FROM notes WHERE id = :id', [
+//         'id' => $_GET['id']
+//     ])->findOrFail();
 
-    authorize($note['user_id'] === $currentUserId);
+//     authorize($note['user_id'] === $currentUserId);
 
-    $db->query('delete FROM notes WHERE id  = :id', [
-        'id' => $_GET['id']
-    ]);
+//     $db->query('delete FROM notes WHERE id  = :id', [
+//         'id' => $_GET['id']
+//     ]);
 
-    header('location:  /');
-    exit();
-}
+//     header('location:  /');
+//     exit();
+// }

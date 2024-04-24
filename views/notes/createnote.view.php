@@ -13,22 +13,7 @@ $config = require base_path('config.php');
 $db = new Database($config['database']);
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {;
-    $errors = [];
 
-    if (!Validator::string($_POST['body'], 1, 1000)) {
-        $errors['body'] = 'You cant fulfill the requirenment';
-    }
-
-    if (empty($errors)) {
-        $db->query('INSERT INTO notes(title, user_id) VALUES(:title, :user_id)', [
-            ':title' => $_POST['body'],
-            'user_id' => 1
-        ]);
-    }
-    header('location:  /');
-    exit();
-}
 ?>
 
 

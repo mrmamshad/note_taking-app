@@ -10,17 +10,17 @@ $db = new Database($config['database']);
 
 $currentUserId = 1;
 
-dd($_POST);
+// dd($_POST);
 
-$note = $db->query('select * from notes where id = :id', [
-    "id" => $_POST['id']
+$note = $db->query('SELECT * FROM notes WHERE id = :id', [
+    'id' => $_GET['id']
 ])->findOrFail();
 
 authorize($note['user_id'] === $currentUserId);
 
-$db->query('delete from notes where id = :id', [
-    'id'=> $_POST['id']
+$db->query('delete FROM notes WHERE id  = :id', [
+    'id' => $_GET['id']
 ]);
 
-header('location: /userdata');
+header('location:  /');
 exit();
