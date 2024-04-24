@@ -13,8 +13,6 @@ $config = require base_path('config.php');
 $db = new Database($config['database']);
 
 
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {;
     $errors = [];
 
@@ -25,9 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {;
     if (empty($errors)) {
         $db->query('INSERT INTO notes(title, user_id) VALUES(:title, :user_id)', [
             ':title' => $_POST['body'],
-            'user_id' => $user_id
+            'user_id' => 1
         ]);
     }
+    header('location:  /');
+    exit();
 }
 ?>
 

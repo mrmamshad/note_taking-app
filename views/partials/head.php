@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Platypi:wght@600&display=swap">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../src/output.css" rel="stylesheet">
 
     <title>Registration</title>
 </head>
