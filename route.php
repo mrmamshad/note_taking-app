@@ -11,11 +11,11 @@ $router->get('/note/edit', 'controllers/notes/edit.php');
 $router->patch('/note', 'controllers/notes/update.php');
 
 
-$router->get('/userdata', 'controllers/userdata.php');
+$router->get('/userdata', 'controllers/userdata.php')->only('auth');
 
 $router->get('/createnote', 'controllers/notes/createnote.php');
 $router->post('/createnote', 'controllers/notes/store.php');
 
-$router->get('/register', 'controllers/registration/create.php');
+$router->get('/register', 'controllers/registration/create.php')->only('guest');
 $router->post('/register', 'controllers/registration/store.php');
 $router->get('/login', 'controllers/login.php');
