@@ -106,7 +106,7 @@ $user_names = $db->query('SELECT * FROM users')->get();
                     <?php if ($name['user_name'] === 'mamshad') : ?>
                         <a href="/userdata?id=<?= $name['id'] ?>">
                             <div class="group relative rounded-3xl shadow-sm space-y-6 overflow-hidden">
-                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man" loading="lazy" width="640" height="805" />
+                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://i.ibb.co/7XY2njh/IMG-20240109-WA0017.jpg" alt="man" loading="lazy" width="640" height="805" />
                                 <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
                                     <div>
                                         <h4 class="text-xl font-semibold dark:text-gray-700 text-white"><?= htmlspecialchars($name['user_name']); ?></h4>
@@ -125,7 +125,7 @@ $user_names = $db->query('SELECT * FROM users')->get();
                     <?php if ($name['user_name'] === 'sabbir') : ?>
                         <a href="/userdata?id=<?= $name['id'] ?>">
                             <div class="group relative rounded-3xl shadow-sm space-y-6 overflow-hidden">
-                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man" loading="lazy" width="640" height="805" />
+                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://i.ibb.co/jZ5psN4/431219782-122136589964102905-6104245445792020527-n.jpg" alt="man" loading="lazy" width="640" height="805" />
                                 <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
                                     <div>
                                         <h4 class="text-xl font-semibold dark:text-gray-700 text-white"><?= htmlspecialchars($name['user_name']); ?></h4>
@@ -144,7 +144,7 @@ $user_names = $db->query('SELECT * FROM users')->get();
                     <?php if ($name['user_name'] === 'mahim') : ?>
                         <a href="/userdata?id=<?= $name['id'] ?>">
                             <div class="group relative rounded-3xl shadow-sm space-y-6 overflow-hidden">
-                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man" loading="lazy" width="640" height="805" />
+                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://i.ibb.co/B4yzBrh/436495100-484264197324747-7264235365872261239-n.jpg" alt="man" loading="lazy" width="640" height="805" />
                                 <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
                                     <div>
                                         <h4 class="text-xl font-semibold dark:text-gray-700 text-white"><?= htmlspecialchars($name['user_name']); ?></h4>
@@ -163,7 +163,7 @@ $user_names = $db->query('SELECT * FROM users')->get();
                     <?php if ($name['user_name'] === 'utso') : ?>
                         <a href="/userdata?id=<?= $name['id'] ?>">
                             <div class="group relative rounded-3xl shadow-sm space-y-6 overflow-hidden">
-                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1442&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="man" loading="lazy" width="640" height="805" />
+                                <img class="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0" src="https://i.ibb.co/8g7pVWt/439734873-1111516410068440-4865480665181784118-n.jpg" alt="man" loading="lazy" width="640" height="805" />
                                 <div class="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 dark:bg-white translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
                                     <div>
                                         <h4 class="text-xl font-semibold dark:text-gray-700 text-white"><?= htmlspecialchars($name['user_name']); ?></h4>

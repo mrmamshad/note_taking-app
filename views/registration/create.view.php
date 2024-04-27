@@ -1,9 +1,10 @@
 <?php
 
 use core\Validator;
+
 require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/nav.php') ?>
-<?php require base_path('views/partials/header.php') ?>
+<!-- <?php require base_path('views/partials/header.php') ?> -->
 
 <form class="space-y-4 md:space-y-6" method="post">
     <div class="flex flex-col items-center -mt-5 justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -16,10 +17,13 @@ require base_path('views/partials/head.php') ?>
                 <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                     Register your identity
                 </h1>
-
+                <div>
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
+                    <input type="name" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name" required="">
+                </div>
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
+                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gmail.com" required="">
                 </div>
                 <div>
                     <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
@@ -56,49 +60,56 @@ require base_path('views/partials/head.php') ?>
     </div>
 </form>
 
+<!-- <?php 
 
-<?php
+// use core\Database;
 
-use core\Database;
+// $config = require base_path('config.php');
 
-$config = require base_path('config.php');
-
-$db = new Database($config['database']);
-
+// $db = new Database($config['database']);
 
 
 
-$email =  $_POST['email'];
-$password = $_POST['password'];
+// $name = $_POST['name'];
+// $email =  $_POST['email'];
+// $password = $_POST['password'];
 
-$errors = [];
+// $errors = [];
 
-if (!Validator::email($email)) {
-    $errors['email'] = 'please provide a valid email address';
-    echo $errors['email'];
-}
+// if (!Validator::email($email))
+// {
+    // $errors['email'] = 'please provide a valid email address';
+    // echo $errors['email'];
+// }
 
 
-if (!Validator::string($password, 7, 255)) {
-    $errors['password'] = 'please provide a valid password';
-    echo $errors['password'];
-}
+// if (!Validator::string($password, 7, 255))
+// {
+    // $errors['password'] = 'please provide a valid password';
+    // echo $errors['password'];
+// }
 
-if (!empty($errors)) {
+// if (!empty($errors))
+// {
     // dd('submitted successfully');
-}
+// }
 
-$user_mail = $db->query('select * from users where email = :email', [
-    'email' => $email
-])->find();
+// $user_mail = $db->query('select * from users where email = :email', [
+    // 'email' => $email
+// ])->find();
 
-if ($user) {
-    header('location: /logind');
-    exit();
-} else {
-    $db->query('INSERT INTO users(email, password) VALUES(:email, :password)', [
-        'email' => $email,
-        'password' => $password
+// if ($user)
+// {
+    // header('location: /logind');
+    // exit();
+// }
+// else
+// {
+    // $db->query('INSERT INTO users(email, password) VALUES(:name , :email, :password)', [
+        // 'name' => $name,
+        // 'email' => $email,
+        // 'password' => $password
         // NEVER store database passwords in clear text. We'll fix this in the login form episode. :)
-    ]);
-}
+    // ]);
+// } 
+
