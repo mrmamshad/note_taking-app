@@ -44,7 +44,7 @@ else
     $db->query('INSERT INTO users(user_name , email, password) VALUES(:user_name , :email, :password)', [
         'user_name' => $name,
         'email' => $email,
-        'password' => $password // NEVER store database passwords in clear text. We'll fix this in the login form episode. :)
+        'password' => password_hash($password, PASSWORD_BCRYPT)
     ]);
 
     $_SESSION['user'] = [
