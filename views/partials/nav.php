@@ -13,7 +13,9 @@
     <div class="flex items-center justify-between">
         <div class="flex items-center space-x-5  mx-auto   bg-[#344955]  rounded-full  mt-6 py-2 px-4 shadow-xl  ">
             <a href="/" class="text-slate-400 from-neutral-600 font-semibold hover:text-green-500 transition duration-300">Home</a>
+            <?php if($_SESSION['user']?? false) : ?>
             <a href="/users" class="text-slate-400 from-neutral-600 font-semibold hover:text-green-500 transition duration-300">Users</a>
+            <?php endif ?>
             <a href="/notes" class="text-slate-400 from-neutral-600 font-semibold hover:text-green-500 transition duration-300">Notes</a>
             <a href="/about" class="text-slate-400 from-neutral-600 font-semibold hover:text-green-500 transition duration-300">About Me</a>
         </div>
