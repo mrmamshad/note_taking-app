@@ -13,7 +13,7 @@
 
 
 
-<div class="mx-auto mt-10  relative overflow-hidden rounded-xl bg-[#3d3c3d] w-4/5 h-64">
+<div class="mx-auto mt-10 z-1 relative overflow-hidden rounded-xl bg-[#3d3c3d] w-4/5 h-64">
     <div class="absolute  items-start  pl-14 pt-8  justify-start text-white z-[1] opacity-90 rounded-xl inset-0.5 bg-[#323132]">
         <h2 class="text-xl font-bold "> About our application</h2>
         <p class="text-slate-200 mt-16">
