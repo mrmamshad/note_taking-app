@@ -23,7 +23,7 @@
         <?php if ($_SESSION['user'] ?? false) : ?>
 
 
-            <div class="sidebar max-h-fit rounded-tl-lg rounded-bl-lg   border border-gray-500 bg-gray-800 text-white fixed top-10 right-0 z-10 w-0 transition-all overflow-x-hidden">
+            <div class="sidebar max-h-fit rounded-tl-2xl rounded-bl-2xl  border border-gray-500 bg-gray-800 text-white fixed top-10 right-0 z-10 w-0 transition-all overflow-x-hidden">
                 <button class="closebtn text-red-400  absolute top-0 left-30 mt-4 ml-4 text-2xl" onclick="closeNav()">&times;</button>
                 <!-- Component Start -->
                 <div class="flex  flex-end flex-col right-0 items-center w-40 h-full   overflow-hidden text-gray-400 bg-gray-900 rounded">
@@ -82,12 +82,16 @@
                             </a>
                         </div>
                     </div>
-                    <a class="flex items-center justify-center w-full h-16 mt-auto bg-gray-800 hover:bg-gray-700 hover:text-gray-300" href="#">
-                        <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span class="ml-2 text-sm font-medium">Account</span>
-                    </a>
+                    <form action="/session" method="post" class="flex items-center justify-center w-full h-16 mt-auto bg-gray-800 hover:bg-gray-700 hover:text-gray-300">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <a  class="flex items-center">
+                            <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <button class="ml-2 text-sm font-medium">Log out</button>
+                        </a>
+                    </form>
+
                 </div>
                 <!-- Component End  -->
             </div>

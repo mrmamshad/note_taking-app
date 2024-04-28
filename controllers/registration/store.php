@@ -47,9 +47,7 @@ else
         'password' => $password
     ]);
 
-    $_SESSION['user'] = [
-        'email' => $email,
-    ];
+    $_SESSION['user'] =  $name;
     header('location: /');
     exit();
 }

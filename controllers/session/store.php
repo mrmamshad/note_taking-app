@@ -40,8 +40,6 @@ $user = $db->query('select * from users where email = :email  and password = :pa
 
 if ($user)
 {
-   
-    
         login([
             'email' => $email,
             'password' => $password,
@@ -49,8 +47,6 @@ if ($user)
 
         header('location: / ');
         exit();
- 
-
 }
 
 
